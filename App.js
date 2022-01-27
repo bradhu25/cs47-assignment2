@@ -27,7 +27,7 @@ export default function App() {
         </View>
 
         <View style={styles.content}>
-          <ImageBackground style={[styles.profile, Themes.light.shadows]} source={Profiles.mtl.image}>
+          <ImageBackground imageStyle={{borderRadius: 16}} style={[styles.profile, Themes.light.shadows]} source={Profiles.mtl.image}>
             <Text style={{fontFamily: 'Sydney', color:'white', fontSize: '32'}}> {Profiles.mtl.name}</Text>
             <Text style={{fontFamily: 'Sydney', color:'white', fontSize: '18'}}> {Profiles.mtl.caption}</Text>
           </ImageBackground>
@@ -111,14 +111,12 @@ const styles = StyleSheet.create({
   },
 
   profile: {
-    resizeMode: 'stretch',
-    height: '100%',
     width: '100%',
     display: 'flex',
     flex: 0.65,
     justifyContent: 'space-between',
     borderRadius: 13,
-    overflow: 'hidden',
+    // overflow: 'hidden',
     paddingVertical: 15,
     paddingHorizontal: 8,
   },
